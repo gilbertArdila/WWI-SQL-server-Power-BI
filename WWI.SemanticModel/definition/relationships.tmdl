@@ -1,0 +1,72 @@
+relationship 84f67505-b404-49ca-a9aa-09e0d7c26ace
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ventas.OrderDate
+	toColumn: LocalDateTable_44022eda-2094-45ea-bff5-59746c1e832a.Date
+
+relationship 4215829f-068a-4dcf-85b7-e61f17ecde49
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ventas.ExpectedDeliveryDate
+	toColumn: LocalDateTable_0372b809-b405-49af-87ba-0b6698fe187a.Date
+
+relationship de2cff01-2e62-4522-bbb0-6f3c51ba65fd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ventas.PickingCompletedWhen
+	toColumn: LocalDateTable_5efb3d85-88b9-46bb-9017-f96fe9400db1.Date
+
+relationship 4adc9f01-acb8-4e38-b198-930746e19948
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ventas.InvoiceDate
+	toColumn: LocalDateTable_9b109d7d-89a1-4fb9-8dca-993a6ce6f4aa.Date
+
+relationship 3842f3bb-58d7-4747-af34-38629a3c6d27
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ordenes.OrderDate
+	toColumn: LocalDateTable_9750a8fb-e22a-4f10-a422-d2aeed1fd32d.Date
+
+relationship 7726ac87-16b8-4f6d-bde0-e028587a4560
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ordenes.ExpectedDeliveryDate
+	toColumn: LocalDateTable_2baaa255-2d21-44be-8bf5-42faf9437884.Date
+
+relationship 81170e85-fdac-49ef-ab6a-71efb7b8f8a1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ordenes.PickingCompletedWhen
+	toColumn: LocalDateTable_5d26a596-5eb5-4e1b-b52f-074bb2da79f2.Date
+
+relationship 6632a6a2-175c-4028-9ab0-ab5b5803f0ad
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_transacciones_cliente.TransactionDate
+	toColumn: LocalDateTable_3998f81e-1fd7-455e-9eaf-2122af47f0a7.Date
+
+relationship 17ef2e17-41c4-4a82-9fde-c39e4db1745d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_transacciones_cliente.FinalizationDate
+	toColumn: LocalDateTable_7a9cb343-1bfb-42c3-9765-4eb89cdd5ac0.Date
+
+relationship 07d95f0a-a384-4921-ab72-15889038f94e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_fecha.FullDate
+	toColumn: LocalDateTable_6d22e78a-1f70-413f-9187-03561a7b133a.Date
+
+relationship AutoDetected_86db47bc-23d5-4794-8d3c-05dad36f6d31
+	fromColumn: fact_ventas.OrderID
+	toColumn: fact_ordenes.OrderID
+
+relationship 64a28f4a-37de-4fca-9c8b-7995b809957c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_cliente.AccountOpenedDate
+	toColumn: LocalDateTable_ad73385f-5c16-457e-b422-9e4bbe9b04e0.Date
+
+relationship AutoDetected_eed59fe3-ba0d-45a6-abc1-b16455e1e284
+	fromColumn: fact_ventas.CustomerID
+	toColumn: dim_cliente.CustomerID
+
+relationship AutoDetected_f9417a1f-501b-4e0b-977d-155b022e0f39
+	isActive: false
+	fromColumn: fact_ordenes.CustomerID
+	toColumn: dim_cliente.CustomerID
+
+relationship AutoDetected_b86a53c8-f3cb-4226-8eaf-eab15c761bee
+	fromColumn: fact_transacciones_cliente.CustomerID
+	toColumn: dim_cliente.CustomerID
+

@@ -1,0 +1,144 @@
+table dim_fecha
+	lineageTag: df6a4c65-4ad7-4048-8656-2b11891ce18f
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 09d1515a-a788-4224-949b-ff7e65d8e012
+		summarizeBy: count
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 47ef2c52-c5ca-4d1e-be6c-618fc3925656
+		summarizeBy: none
+		sourceColumn: FullDate
+
+		variation Variación
+			isDefault
+			relationship: 07d95f0a-a384-4921-ab72-15889038f94e
+			defaultHierarchy: LocalDateTable_6d22e78a-1f70-413f-9187-03561a7b133a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 578be397-170b-4bbc-abb0-568785d67917
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 135531b2-7dc3-458b-a944-2053282f5b57
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: aaceb8f4-ca99-4b52-a78d-b581d544a72a
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthYear
+		dataType: string
+		lineageTag: a2cd95ca-e308-4672-ba31-e705fe75922c
+		summarizeBy: none
+		sourceColumn: MonthYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: c065defa-8a1b-40b6-b762-c75867fafac0
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: c5212262-9f5d-486e-944c-cbd5cc9c12a9
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		dataType: string
+		lineageTag: b00fbd1a-3398-4773-9746-7cb9f7ff4eb4
+		summarizeBy: none
+		sourceColumn: DayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: b274628c-cbeb-409c-8312-9ace938de796
+		summarizeBy: sum
+		sourceColumn: WeekOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWeekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0362a9e2-de15-4607-a533-4242ab707672
+		summarizeBy: none
+		sourceColumn: IsWeekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: cec297cf-5614-49e5-8f95-be091a05418a
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 478491ea-5dc9-4096-aa6b-ef45e4cd1843
+		summarizeBy: sum
+		sourceColumn: FiscalMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d91b6b7-6c7f-49cc-9fb2-099e0fa0ddf2
+		summarizeBy: sum
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_fecha = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database(".\SQLEXPRESS", "WideWorldImporters"),
+				    dbo_vw_dim_date_powerBI2 = Origen{[Schema="dbo",Item="vw_dim_date_powerBI2"]}[Data]
+				in
+				    dbo_vw_dim_date_powerBI2
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,178 @@
+table fact_ventas
+	lineageTag: 2660bd8a-cd54-450d-8ebd-1f8c8a966475
+
+	column InvoiceLineID
+		dataType: string
+		lineageTag: ef01e58e-83d5-49a4-bbea-57956e1548f8
+		summarizeBy: none
+		sourceColumn: InvoiceLineID
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceID
+		dataType: string
+		lineageTag: 61a3533c-4566-470a-9d30-2fbee9f31f73
+		summarizeBy: none
+		sourceColumn: InvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderID
+		dataType: string
+		lineageTag: 5df009e7-4671-484a-a842-3c7de0991b50
+		summarizeBy: none
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: b72e5f4f-20a9-4e87-9efa-a80897c8d0f2
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3643c263-9206-4373-bac5-16e474a0bc10
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variación
+			isDefault
+			relationship: 84f67505-b404-49ca-a9aa-09e0d7c26ace
+			defaultHierarchy: LocalDateTable_44022eda-2094-45ea-bff5-59746c1e832a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ExpectedDeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3e11db0e-791c-43ad-93f2-4a1b59fa1e5c
+		summarizeBy: none
+		sourceColumn: ExpectedDeliveryDate
+
+		variation Variación
+			isDefault
+			relationship: 4215829f-068a-4dcf-85b7-e61f17ecde49
+			defaultHierarchy: LocalDateTable_0372b809-b405-49af-87ba-0b6698fe187a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PickingCompletedWhen
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e38179d1-ef3a-45a9-a984-4e658e8850a8
+		summarizeBy: none
+		sourceColumn: PickingCompletedWhen
+
+		variation Variación
+			isDefault
+			relationship: de2cff01-2e62-4522-bbb0-6f3c51ba65fd
+			defaultHierarchy: LocalDateTable_5efb3d85-88b9-46bb-9017-f96fe9400db1.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d562f1c1-a36a-43d3-8faa-8fc2494d1ef8
+		summarizeBy: none
+		sourceColumn: InvoiceDate
+
+		variation Variación
+			isDefault
+			relationship: 4adc9f01-acb8-4e38-b198-930746e19948
+			defaultHierarchy: LocalDateTable_9b109d7d-89a1-4fb9-8dca-993a6ce6f4aa.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 1dba2be7-2265-4da7-8388-dee0dc8292ce
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 447342e1-e635-4231-b6c6-723fde74bc5b
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExtendedPrice
+		dataType: double
+		lineageTag: 862d0c4f-2fcd-4123-a2a6-e5c84bcd5d7a
+		summarizeBy: sum
+		sourceColumn: ExtendedPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxAmount
+		dataType: double
+		lineageTag: 43fabeb7-9381-4439-b44e-8c9701b4245b
+		summarizeBy: sum
+		sourceColumn: TaxAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LineProfit
+		dataType: double
+		lineageTag: 02933665-6551-4ab3-9407-a49b5a7b3f32
+		summarizeBy: sum
+		sourceColumn: LineProfit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsCreditNote
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3e2855a5-2235-4bbd-b6a3-3dc2f628e632
+		summarizeBy: none
+		sourceColumn: IsCreditNote
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsOnTimeDelivery
+		dataType: int64
+		formatString: 0
+		lineageTag: 0724696b-4567-4f76-bc5f-2ccd4953dd3c
+		summarizeBy: sum
+		sourceColumn: IsOnTimeDelivery
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_ventas = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database(".\SQLEXPRESS", "WideWorldImporters"),
+				    dbo_sp_fact_sales_powerBI2 = Origen{[Schema="dbo",Item="sp_fact_sales_powerBI2"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(dbo_sp_fact_sales_powerBI2,{{"CustomerID", type text}, {"InvoiceLineID", type text}, {"InvoiceID", type text}, {"OrderID", type text}, {"PickingCompletedWhen", type datetime}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

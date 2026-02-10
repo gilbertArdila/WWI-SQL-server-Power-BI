@@ -1,0 +1,120 @@
+table fact_transacciones_cliente
+	lineageTag: d8825db4-b032-4f1d-98ec-6748d25b6842
+
+	column CustomerTransactionID
+		dataType: string
+		lineageTag: 346372ca-ec6a-4b5c-8c28-65e178c84b4f
+		summarizeBy: none
+		sourceColumn: CustomerTransactionID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: string
+		lineageTag: 8b0c3b92-7eb1-4097-80a6-59ff0a3a4325
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceID
+		dataType: string
+		lineageTag: 2070fd75-184b-4e8a-ba27-b2e3f5472701
+		summarizeBy: none
+		sourceColumn: InvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TransactionDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0a7fce77-1273-497d-a7b4-2743e4b2252a
+		summarizeBy: none
+		sourceColumn: TransactionDate
+
+		variation Variación
+			isDefault
+			relationship: 6632a6a2-175c-4028-9ab0-ab5b5803f0ad
+			defaultHierarchy: LocalDateTable_3998f81e-1fd7-455e-9eaf-2122af47f0a7.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FinalizationDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 99277adf-827c-4a2c-9ca6-675b0b5448f5
+		summarizeBy: none
+		sourceColumn: FinalizationDate
+
+		variation Variación
+			isDefault
+			relationship: 17ef2e17-41c4-4a82-9fde-c39e4db1745d
+			defaultHierarchy: LocalDateTable_7a9cb343-1bfb-42c3-9765-4eb89cdd5ac0.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TransactionAmount
+		dataType: double
+		lineageTag: fa3a9ea3-4443-4537-9974-93a24350ea0a
+		summarizeBy: sum
+		sourceColumn: TransactionAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OutstandingBalance
+		dataType: double
+		lineageTag: f90a6aea-90cf-4b44-8c23-c89b1edc6ec3
+		summarizeBy: sum
+		sourceColumn: OutstandingBalance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsFinalized
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f15a827d-4ab6-4c03-8d5e-c3eddb52935d
+		summarizeBy: none
+		sourceColumn: IsFinalized
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsPendingTransaction
+		dataType: int64
+		formatString: 0
+		lineageTag: 2783e221-4fb0-4758-a2e4-cca994b34148
+		summarizeBy: sum
+		sourceColumn: IsPendingTransaction
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDelinquentTransaction
+		dataType: int64
+		formatString: 0
+		lineageTag: e7a1c0d3-e8cb-47df-b90f-39e194f9e824
+		summarizeBy: sum
+		sourceColumn: IsDelinquentTransaction
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_transacciones_cliente = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database(".\SQLEXPRESS", "WideWorldImporters"),
+				    dbo_sp_fact_customer_transactions_powerBI2 = Origen{[Schema="dbo",Item="sp_fact_customer_transactions_powerBI2"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(dbo_sp_fact_customer_transactions_powerBI2,{{"CustomerTransactionID", type text}, {"CustomerID", type text}, {"InvoiceID", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+
