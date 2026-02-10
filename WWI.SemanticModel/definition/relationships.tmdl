@@ -13,31 +13,6 @@ relationship de2cff01-2e62-4522-bbb0-6f3c51ba65fd
 	fromColumn: fact_ventas.PickingCompletedWhen
 	toColumn: LocalDateTable_5efb3d85-88b9-46bb-9017-f96fe9400db1.Date
 
-relationship 4adc9f01-acb8-4e38-b198-930746e19948
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_ventas.InvoiceDate
-	toColumn: LocalDateTable_9b109d7d-89a1-4fb9-8dca-993a6ce6f4aa.Date
-
-relationship 3842f3bb-58d7-4747-af34-38629a3c6d27
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_ordenes.OrderDate
-	toColumn: LocalDateTable_9750a8fb-e22a-4f10-a422-d2aeed1fd32d.Date
-
-relationship 7726ac87-16b8-4f6d-bde0-e028587a4560
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_ordenes.ExpectedDeliveryDate
-	toColumn: LocalDateTable_2baaa255-2d21-44be-8bf5-42faf9437884.Date
-
-relationship 81170e85-fdac-49ef-ab6a-71efb7b8f8a1
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_ordenes.PickingCompletedWhen
-	toColumn: LocalDateTable_5d26a596-5eb5-4e1b-b52f-074bb2da79f2.Date
-
-relationship 6632a6a2-175c-4028-9ab0-ab5b5803f0ad
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_transacciones_cliente.TransactionDate
-	toColumn: LocalDateTable_3998f81e-1fd7-455e-9eaf-2122af47f0a7.Date
-
 relationship 17ef2e17-41c4-4a82-9fde-c39e4db1745d
 	joinOnDateBehavior: datePartOnly
 	fromColumn: fact_transacciones_cliente.FinalizationDate
@@ -69,4 +44,27 @@ relationship AutoDetected_f9417a1f-501b-4e0b-977d-155b022e0f39
 relationship AutoDetected_b86a53c8-f3cb-4226-8eaf-eab15c761bee
 	fromColumn: fact_transacciones_cliente.CustomerID
 	toColumn: dim_cliente.CustomerID
+
+relationship 57efcf0d-cab5-809e-9c33-ee254a592e67
+	fromColumn: fact_ventas.InvoiceDate
+	toColumn: dim_fecha.FullDate
+
+relationship c00ba3dd-7af6-179a-53cc-106879f020cd
+	isActive: false
+	fromColumn: fact_ordenes.OrderDate
+	toColumn: dim_fecha.FullDate
+
+relationship 3768e22a-94f0-0460-909b-c959e3a7068f
+	fromColumn: fact_transacciones_cliente.TransactionDate
+	toColumn: dim_fecha.FullDate
+
+relationship d58b9298-98d5-c87b-6daa-0ce9cbf958ec
+	isActive: false
+	fromColumn: fact_ordenes.ExpectedDeliveryDate
+	toColumn: dim_fecha.FullDate
+
+relationship 9920cdf3-a8b7-cafa-d521-0d8e816a5ee7
+	isActive: false
+	fromColumn: fact_ordenes.PickingCompletedWhen
+	toColumn: dim_fecha.FullDate
 

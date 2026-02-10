@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 397.25099384140708,
-            "y": 0
+            "x": 362.25099384140708,
+            "y": 297
           },
           "nodeIndex": "fact_ventas",
           "nodeLineageTag": "2660bd8a-cd54-450d-8ebd-1f8c8a966475",
@@ -19,12 +19,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 0,
-            "y": 20.518501834489484
+            "x": 13,
+            "y": 0
           },
           "nodeIndex": "fact_ordenes",
           "nodeLineageTag": "70d0268b-cd89-4e36-9517-2e9b9c11af4b",
@@ -32,11 +32,11 @@
             "height": 272,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 798.44134252469723,
+            "x": 794.44134252469723,
             "y": 0
           },
           "nodeIndex": "dim_fecha",
@@ -45,12 +45,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 95.441342524697347,
-            "y": 388.81293032328495
+            "x": 0,
+            "y": 471.81293032328495
           },
           "nodeIndex": "fact_transacciones_cliente",
           "nodeLineageTag": "d8825db4-b032-4f1d-98ec-6748d25b6842",
@@ -58,12 +58,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 767.44134252469712,
-            "y": 430.40646516164247
+            "x": 974.44134252469712,
+            "y": 394.40646516164247
           },
           "nodeIndex": "dim_cliente",
           "nodeLineageTag": "c766fcf2-2311-4d11-b696-1739fd46b248",
@@ -71,7 +71,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         }
       ],
       "name": "Todas las tablas",

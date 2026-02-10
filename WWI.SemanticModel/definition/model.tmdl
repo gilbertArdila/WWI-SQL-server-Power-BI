@@ -17,13 +17,8 @@ ref table DateTableTemplate_6008eb61-b92e-4bf1-a288-d1386606f60b
 ref table LocalDateTable_44022eda-2094-45ea-bff5-59746c1e832a
 ref table LocalDateTable_0372b809-b405-49af-87ba-0b6698fe187a
 ref table LocalDateTable_5efb3d85-88b9-46bb-9017-f96fe9400db1
-ref table LocalDateTable_9b109d7d-89a1-4fb9-8dca-993a6ce6f4aa
 ref table fact_ordenes
-ref table LocalDateTable_9750a8fb-e22a-4f10-a422-d2aeed1fd32d
-ref table LocalDateTable_2baaa255-2d21-44be-8bf5-42faf9437884
-ref table LocalDateTable_5d26a596-5eb5-4e1b-b52f-074bb2da79f2
 ref table fact_transacciones_cliente
-ref table LocalDateTable_3998f81e-1fd7-455e-9eaf-2122af47f0a7
 ref table LocalDateTable_7a9cb343-1bfb-42c3-9765-4eb89cdd5ac0
 ref table dim_fecha
 ref table LocalDateTable_6d22e78a-1f70-413f-9187-03561a7b133a

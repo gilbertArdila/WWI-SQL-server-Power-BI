@@ -1,6 +1,52 @@
 table fact_ordenes
 	lineageTag: 70d0268b-cd89-4e36-9517-2e9b9c11af4b
 
+	measure 'órdenes creadas' = COUNTROWS(fact_ordenes)
+		formatString: #,0
+		lineageTag: c6d49339-1066-4e4d-b557-d105af212f11
+
+	measure 'órdenes facturadas' =
+			CALCULATE(
+			    COUNTROWS(fact_ordenes),
+			    fact_ordenes[IsInvoicedOrder]= 1
+			)
+		formatString: #,0
+		lineageTag: 7bb4d709-3e14-464c-a10f-645a261ff9ed
+
+	measure '% Conversión pedidos' =
+			DIVIDE(
+			    fact_ordenes[órdenes facturadas],
+			    fact_ordenes[órdenes creadas]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: e354fbe8-c4b2-4a8d-81b7-f0b6f58dd200
+
+	measure 'órdenes pendientes' =
+			CALCULATE(
+			    COUNTROWS(fact_ordenes),
+			    fact_ordenes[IsPendingOrder] = 1
+			)
+		formatString: #,0
+		lineageTag: d80a739e-03b5-47bd-b50f-d1424d1ffd8b
+
+	measure 'órdenes a tiempo' =
+			
+			CALCULATE(
+			    COUNTROWS(fact_ordenes),
+			    fact_ordenes[IsOnTimeDelivery] = 1
+			)
+		formatString: #,0
+		lineageTag: f151404e-840b-4a81-a655-69596ec0d3ce
+
+	measure '% Cumplimiento entrega' =
+			
+			DIVIDE(
+			    fact_ordenes[órdenes a tiempo],
+			    fact_ordenes[órdenes facturadas]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 510ee186-80e8-48db-a0b6-ec004624ac3e
+
 	column OrderID
 		dataType: string
 		lineageTag: 83ba4eb2-2df0-4d34-9304-6ed1cf569b88
@@ -24,11 +70,6 @@ table fact_ordenes
 		summarizeBy: none
 		sourceColumn: OrderDate
 
-		variation Variación
-			isDefault
-			relationship: 3842f3bb-58d7-4747-af34-38629a3c6d27
-			defaultHierarchy: LocalDateTable_9750a8fb-e22a-4f10-a422-d2aeed1fd32d.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -39,11 +80,6 @@ table fact_ordenes
 		lineageTag: 8c579a6a-bc7f-4b1a-9588-3b0f98ae8d41
 		summarizeBy: none
 		sourceColumn: ExpectedDeliveryDate
-
-		variation Variación
-			isDefault
-			relationship: 7726ac87-16b8-4f6d-bde0-e028587a4560
-			defaultHierarchy: LocalDateTable_2baaa255-2d21-44be-8bf5-42faf9437884.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -56,18 +92,13 @@ table fact_ordenes
 		summarizeBy: none
 		sourceColumn: PickingCompletedWhen
 
-		variation Variación
-			isDefault
-			relationship: 81170e85-fdac-49ef-ab6a-71efb7b8f8a1
-			defaultHierarchy: LocalDateTable_5d26a596-5eb5-4e1b-b52f-074bb2da79f2.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 	column IsInvoicedOrder
 		dataType: int64
 		formatString: 0
 		lineageTag: c421963e-cb5d-429e-9fc0-753bc69ae966
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsInvoicedOrder
 
 		annotation SummarizationSetBy = Automatic
@@ -76,7 +107,7 @@ table fact_ordenes
 		dataType: int64
 		formatString: 0
 		lineageTag: c682d48b-bcdb-4c6a-98a0-35151e19a620
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsPendingOrder
 
 		annotation SummarizationSetBy = Automatic
@@ -85,7 +116,7 @@ table fact_ordenes
 		dataType: int64
 		formatString: 0
 		lineageTag: 44316639-06fa-4504-8488-1c24fd47476d
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsOnTimeDelivery
 
 		annotation SummarizationSetBy = Automatic

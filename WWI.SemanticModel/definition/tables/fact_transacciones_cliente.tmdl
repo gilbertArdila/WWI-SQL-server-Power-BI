@@ -1,6 +1,26 @@
 table fact_transacciones_cliente
 	lineageTag: d8825db4-b032-4f1d-98ec-6748d25b6842
 
+	measure 'clientes morosos' =
+			CALCULATE(
+			    DISTINCTCOUNT(fact_transacciones_cliente[CustomerID]),
+			    fact_transacciones_cliente[IsDelinquentTransaction] = 1
+			)
+		formatString: 0
+		lineageTag: 589949c7-12ae-4480-9e7f-93fae2e6caac
+
+	measure 'saldo pendiente' = SUM(fact_transacciones_cliente[OutstandingBalance])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 36034ec9-2914-4ff9-bdf2-237b7edcdbfa
+
+	measure '% clientes morosos' =
+			DIVIDE(
+			    fact_transacciones_cliente[clientes morosos],
+			    DISTINCTCOUNT(dim_cliente[CustomerID]
+			    ))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 23b402a7-e7ae-45da-b66b-725a70e02560
+
 	column CustomerTransactionID
 		dataType: string
 		lineageTag: 346372ca-ec6a-4b5c-8c28-65e178c84b4f
@@ -31,11 +51,6 @@ table fact_transacciones_cliente
 		lineageTag: 0a7fce77-1273-497d-a7b4-2743e4b2252a
 		summarizeBy: none
 		sourceColumn: TransactionDate
-
-		variation Variación
-			isDefault
-			relationship: 6632a6a2-175c-4028-9ab0-ab5b5803f0ad
-			defaultHierarchy: LocalDateTable_3998f81e-1fd7-455e-9eaf-2122af47f0a7.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 

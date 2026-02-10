@@ -1,6 +1,22 @@
 table fact_ventas
 	lineageTag: 2660bd8a-cd54-450d-8ebd-1f8c8a966475
 
+	measure 'ventas totales' = SUM(fact_ventas[ExtendedPrice])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: f20fd0be-c36b-47ab-b31e-5ecd9154b842
+
+	measure 'utilidad total' = SUM(fact_ventas[LineProfit])
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: a56b2e5b-fad9-4425-a197-18b0c714607c
+
+	measure 'cantidad vendida (unidades)' = SUM(fact_ventas[Quantity])
+		formatString: #,0
+		lineageTag: 2ddf4965-5c59-4a58-b6cb-31c8e714c53a
+
+	measure facturas = DISTINCTCOUNT(fact_ventas[InvoiceID])
+		formatString: #,0
+		lineageTag: 9d4c9166-38f8-4eef-ad71-55887c8dd933
+
 	column InvoiceLineID
 		dataType: string
 		lineageTag: ef01e58e-83d5-49a4-bbea-57956e1548f8
@@ -85,11 +101,6 @@ table fact_ventas
 		lineageTag: d562f1c1-a36a-43d3-8faa-8fc2494d1ef8
 		summarizeBy: none
 		sourceColumn: InvoiceDate
-
-		variation Variación
-			isDefault
-			relationship: 4adc9f01-acb8-4e38-b198-930746e19948
-			defaultHierarchy: LocalDateTable_9b109d7d-89a1-4fb9-8dca-993a6ce6f4aa.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
