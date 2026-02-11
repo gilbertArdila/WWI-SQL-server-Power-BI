@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
+  "displayName": "Cerrar menú warehouse",
+  "name": "4ce4708b88eb4e2bf592",
+  "options": {
+    "targetVisualNames": [
+      "ba38ebab1a1001d75a6b"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "697dedbe7245def3b75c",
+    "sections": {
+      "697dedbe7245def3b75c": {
+        "visualContainers": {
+          "ba38ebab1a1001d75a6b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "c8ad5df81c6e59626526": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "cbfaeaf04d5575d8c9d3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "b94d02a43749b1895bdb": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "f978bf87cab2d180436e": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "9ce70ccbde9d71a79c58": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {}
+  }
+}

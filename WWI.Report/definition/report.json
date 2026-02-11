@@ -37,6 +37,22 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "cerrar7217538834630267.png",
+          "path": "cerrar7217538834630267.png",
+          "type": "Image"
+        },
+        {
+          "name": "pngtree-3d-data-analytics-dash1760871634133313.png",
+          "path": "pngtree-3d-data-analytics-dash1760871634133313.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {
@@ -45,6 +61,7 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true
   }
 }
