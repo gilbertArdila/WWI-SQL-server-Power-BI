@@ -3,9 +3,7 @@
   "displayName": "Abrir menú ventas",
   "name": "7700a9219326a5feb7cd",
   "options": {
-    "targetVisualNames": [
-      "67d58b72963b4fe9d30c"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
@@ -13,6 +11,87 @@
     "sections": {
       "4afc6677f432ce8a2ac9": {
         "visualContainers": {
+          "0c5ceb3cd88a6c008272": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e82e017185070d929357",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "% Variación ventas"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "146aa94f87a903df2472": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8d7a84eb82dc6a31ade0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "19c4eee6e3c49ebd4658": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8066e12df77d4719c2d6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "Ventas año anterior"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "1f857a1347582e29f4cb": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
           "220b5550a5b947fbcc0c": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -22,19 +101,257 @@
               }
             }
           },
-          "9d149b921ff01b97c3eb": {
+          "33fa7127f8dcece99775": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1ae0a8f1609ddb0964f3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "facturas"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "cb7526aeee95c702666b": {
-            "singleVisual": {
-              "visualType": "actionButton",
+              "visualType": "card",
               "objects": {}
             }
           },
           "413302f53367cfb1e4d7": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "46d2ab7c847159a9549f": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c312a1edca280a29f3b6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ordenes"
+                        }
+                      },
+                      "Property": "% Conversión pedidos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "49a2defa00db3dd5719b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "45d1dd21f85cfd887d7a",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0a2a5c66c4978bd451f7",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fa4e36278a952a35761b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f9cebbdcdb5745413a1f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "Ventas año anterior"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "5560832bfa8c5c8716a4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e704a2a49945dd559890",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "% margen"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "56579863de2d60d57b54": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4a5d4ae286f27588d258",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ordenes"
+                        }
+                      },
+                      "Property": "órdenes pendientes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "59e0768fa374b6eb4eca": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "6530c89f885ed3ec550a": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
@@ -46,9 +363,375 @@
               "objects": {}
             }
           },
-          "1f857a1347582e29f4cb": {
+          "688281e72bbba8c30d35": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "12bd102aab89c1ba2c75",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "cantidad vendida (unidades)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "shape",
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "6eda77f907dda67d1d12": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "7ab622961e77796bbe5b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "49f5fd619b4d3d9503ab",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "Variación ventas"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "7f6bc9d1ed4939e53dd8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e8c87cf999108a826ea6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_transacciones_cliente"
+                        }
+                      },
+                      "Property": "clientes morosos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "9484cf1eee1ca00038f9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a6028e448a91d3adf442",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ordenes"
+                        }
+                      },
+                      "Property": "% Órdenes pendientes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "96e0883d6b5a4c858724": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0940166ed674bd8398c5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ordenes"
+                        }
+                      },
+                      "Property": "órdenes creadas"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "9d149b921ff01b97c3eb": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "a320ae8440ff1961c7b5": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "dfe62ec7ca2a0f92e726",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "utilidad total"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "cb7526aeee95c702666b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "e1cfbca525b54cbe7935": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "567dc0fd4d94c5cf76c5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_transacciones_cliente"
+                        }
+                      },
+                      "Property": "% clientes morosos"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "ea152cf45a48d3b8c89e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "354a2409bf5cb7e0751b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ordenes"
+                        }
+                      },
+                      "Property": "% Cumplimiento entrega"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "ef86affc76c9225e18d5": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "762f99cd590921176c34",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_transacciones_cliente"
+                        }
+                      },
+                      "Property": "saldo pendiente"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "f2eada01d5d4ad932c68": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9032301de5d27412c410",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d528eab79e6eace0c938",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "85e2e022a199f95f499d",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "fb40e9d2efa646c4d598": {
+            "singleVisual": {
+              "visualType": "textbox",
               "objects": {}
             }
           }

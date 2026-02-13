@@ -18,7 +18,7 @@ table fact_ordenes
 			    fact_ordenes[órdenes facturadas],
 			    fact_ordenes[órdenes creadas]
 			)
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: e354fbe8-c4b2-4a8d-81b7-f0b6f58dd200
 
 	measure 'órdenes pendientes' =
@@ -44,8 +44,16 @@ table fact_ordenes
 			    fact_ordenes[órdenes a tiempo],
 			    fact_ordenes[órdenes facturadas]
 			)
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: 510ee186-80e8-48db-a0b6-ec004624ac3e
+
+	measure '% Órdenes pendientes' =
+			DIVIDE(
+			    fact_ordenes[órdenes pendientes],
+			    fact_ordenes[órdenes creadas]
+			)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 16793984-9eb3-42f6-b1c5-5020a408e7ec
 
 	column OrderID
 		dataType: string

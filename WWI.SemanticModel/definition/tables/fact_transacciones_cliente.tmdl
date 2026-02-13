@@ -18,7 +18,7 @@ table fact_transacciones_cliente
 			    fact_transacciones_cliente[clientes morosos],
 			    DISTINCTCOUNT(dim_cliente[CustomerID]
 			    ))
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: 23b402a7-e7ae-45da-b66b-725a70e02560
 
 	column CustomerTransactionID

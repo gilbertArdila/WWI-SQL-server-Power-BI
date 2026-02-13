@@ -17,6 +17,35 @@ table fact_ventas
 		formatString: #,0
 		lineageTag: 9d4c9166-38f8-4eef-ad71-55887c8dd933
 
+	measure '% margen' = ```
+			DIVIDE(
+			    [utilidad total],
+			    fact_ventas[ventas totales]
+			)
+			
+			```
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: c5e04ad9-988e-4380-8f47-9d9e4d586e78
+
+	measure 'Ventas año anterior' =
+			CALCULATE(
+			    fact_ventas[ventas totales],
+			    SAMEPERIODLASTYEAR(dim_fecha[FullDate]
+			    ))
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 326bb95d-15c9-4deb-a1f4-48e7e4a62a8a
+
+	measure 'Variación ventas' = fact_ventas[ventas totales] - fact_ventas[Ventas año anterior]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: b8806791-ef89-4614-ae6b-c2f053e2dd2e
+
+	measure '% Variación ventas' =
+			DIVIDE(
+			    [Variación ventas],
+			    fact_ventas[Ventas año anterior])
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: 97ee6a8a-41be-4dad-ac97-f84234211f36
+
 	column InvoiceLineID
 		dataType: string
 		lineageTag: ef01e58e-83d5-49a4-bbea-57956e1548f8
