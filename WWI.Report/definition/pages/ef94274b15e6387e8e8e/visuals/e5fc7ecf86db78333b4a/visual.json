@@ -3,10 +3,10 @@
   "name": "e5fc7ecf86db78333b4a",
   "position": {
     "x": 0,
-    "y": 189.85245840699446,
-    "z": 3000,
-    "height": 39.968774395003905,
-    "width": 110.91334894613584,
+    "y": 189.46255506607929,
+    "z": 4250,
+    "height": 40.59911894273128,
+    "width": 166.90748898678413,
     "tabOrder": 3000
   },
   "visual": {
@@ -25,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -45,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sales'"
+                  "Value": "'Executive Overview'"
                 }
               }
             },
@@ -60,8 +71,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#2D3436'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -144,6 +156,17 @@
           "selector": {
             "id": "hover"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -158,6 +181,44 @@
             }
           }
         }
+      ],
+      "fill": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2A2A2A'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -167,7 +228,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'página sales'"
+                  "Value": "'Executive Overview'"
                 }
               }
             }
@@ -205,5 +266,6 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "e6cc590ff60540118a25",
+  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

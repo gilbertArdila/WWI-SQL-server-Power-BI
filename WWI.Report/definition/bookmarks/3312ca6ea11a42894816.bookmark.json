@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
+  "displayName": "Abrir menú financial",
+  "name": "3312ca6ea11a42894816",
+  "options": {
+    "targetVisualNames": [
+      "dcd54214b115da559c28"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "d6cede2bf94b4c86d1c6",
+    "sections": {
+      "d6cede2bf94b4c86d1c6": {
+        "visualContainers": {
+          "db76d1b87f7312b0ff70": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "f66f8748044a510eb056": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "a9b895903ba31a6ffb1e": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "1aad41fe6893a2837bb4": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "8eaaf57c8c751906e672": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "802ae56f52540654602b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "dcd54214b115da559c28": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {}
+  }
+}

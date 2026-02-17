@@ -3,10 +3,10 @@
   "name": "c8ad5df81c6e59626526",
   "position": {
     "x": 0,
-    "y": 190.85089773614365,
+    "y": 190.59030837004406,
     "z": 4000,
-    "height": 39.968774395003905,
-    "width": 110.91334894613584,
+    "height": 40.59911894273128,
+    "width": 165.77973568281939,
     "tabOrder": 2000
   },
   "visual": {
@@ -25,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -45,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sales'"
+                  "Value": "'Executive Overview'"
                 }
               }
             },
@@ -60,8 +71,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#2D3436'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -144,6 +156,17 @@
           "selector": {
             "id": "hover"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -158,6 +181,44 @@
             }
           }
         }
+      ],
+      "fill": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2A2A2A'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -167,7 +228,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'página warehouse'"
+                  "Value": "'Executive Overview'"
                 }
               }
             }

@@ -3,10 +3,10 @@
   "name": "b94d02a43749b1895bdb",
   "position": {
     "x": 0,
-    "y": 299.76580796252927,
+    "y": 299.98237885462555,
     "z": 2000,
-    "height": 38.969555035128806,
-    "width": 110.91334894613584,
+    "height": 38.343612334801762,
+    "width": 165.77973568281939,
     "tabOrder": 4000
   },
   "visual": {
@@ -25,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -45,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Warehouse'"
+                  "Value": "'Customer Analytics'"
                 }
               }
             },
@@ -127,6 +138,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -161,7 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F3A5F'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -170,7 +192,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             }
@@ -188,7 +210,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'página activa'"
+                  "Value": "'Customer Analytics'"
                 }
               }
             }

@@ -2,8 +2,10 @@ table fact_ventas
 	lineageTag: 2660bd8a-cd54-450d-8ebd-1f8c8a966475
 
 	measure 'ventas totales' = SUM(fact_ventas[ExtendedPrice])
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: 0
 		lineageTag: f20fd0be-c36b-47ab-b31e-5ecd9154b842
+
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'utilidad total' = SUM(fact_ventas[LineProfit])
 		formatString: \$#,0;(\$#,0);\$#,0
@@ -45,6 +47,30 @@ table fact_ventas
 			    fact_ventas[Ventas año anterior])
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: 97ee6a8a-41be-4dad-ac97-f84234211f36
+
+	measure 'Utilidad año anterior' =
+			
+			CALCULATE(
+			    [utilidad total],
+			    SAMEPERIODLASTYEAR(dim_fecha[FullDate]))
+		lineageTag: aaf66995-2702-461a-9360-8488bbb7330b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% margen año anterior' =
+			
+			CALCULATE(
+			    [% margen],
+			    SAMEPERIODLASTYEAR(dim_fecha[FullDate]
+			    ))
+		lineageTag: 3655a5ca-bbd1-4996-b0cc-df07e72078cf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% variación margen' = [% margen] -[% margen año anterior]
+		lineageTag: b178eff4-3f79-4c19-90e7-912436a5299a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column InvoiceLineID
 		dataType: string

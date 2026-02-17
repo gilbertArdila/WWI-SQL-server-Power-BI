@@ -5,8 +5,9 @@
     "x": 0,
     "y": 0,
     "z": 3000,
-    "height": 719.23809523809518,
-    "width": 110.91334894613584
+    "height": 718,
+    "width": 166,
+    "tabOrder": 5001
   },
   "visualGroup": {
     "displayName": "Menú",

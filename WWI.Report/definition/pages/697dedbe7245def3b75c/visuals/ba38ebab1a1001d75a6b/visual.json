@@ -26,6 +26,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "text": [
@@ -127,6 +138,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -161,7 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2F80ED'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }

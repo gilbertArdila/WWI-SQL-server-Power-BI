@@ -3,10 +3,10 @@
   "name": "f4de514ea04cd0a0369e",
   "position": {
     "x": 0,
-    "y": 246.80718188914912,
-    "z": 2000,
-    "height": 39.968774395003905,
-    "width": 110.91334894613584,
+    "y": 246.97797356828193,
+    "z": 4125,
+    "height": 39.471365638766521,
+    "width": 166.90748898678413,
     "tabOrder": 4000
   },
   "visual": {
@@ -25,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -45,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Purchase'"
+                  "Value": "'Sales Performance'"
                 }
               }
             },
@@ -127,6 +138,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -161,7 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F3A5F'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -170,7 +192,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             }
@@ -188,7 +210,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'página activa'"
+                  "Value": "'Sales Performance'"
                 }
               }
             }
@@ -199,5 +221,6 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "e6cc590ff60540118a25",
+  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

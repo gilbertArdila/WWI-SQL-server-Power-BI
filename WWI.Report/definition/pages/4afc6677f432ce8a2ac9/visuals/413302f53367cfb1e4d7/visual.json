@@ -3,10 +3,10 @@
   "name": "413302f53367cfb1e4d7",
   "position": {
     "x": 0,
-    "y": 191.72294372294371,
-    "z": 2000,
-    "height": 39.896103896103895,
-    "width": 110.82251082251082,
+    "y": 192.11304780179117,
+    "z": 5500,
+    "height": 40.156862745098039,
+    "width": 167.65490196078431,
     "tabOrder": 4000
   },
   "visual": {
@@ -25,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -45,7 +56,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sales'"
+                  "Value": "'Executive Overview'"
                 }
               }
             },
@@ -127,6 +138,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -161,7 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F3A5F'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -170,7 +192,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             }
@@ -188,7 +210,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'página activa'"
+                  "Value": "'Executive Overview'"
                 }
               }
             }

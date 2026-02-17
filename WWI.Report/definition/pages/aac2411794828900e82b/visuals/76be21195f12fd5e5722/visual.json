@@ -4,9 +4,10 @@
   "position": {
     "x": 166.66666666666666,
     "y": 144.44444444444443,
-    "z": 0,
+    "z": 1000,
     "height": 46.666666666666664,
-    "width": 187.77777777777777
+    "width": 187.77777777777777,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "actionButton",
@@ -24,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -126,6 +138,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -160,7 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2F80ED'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }

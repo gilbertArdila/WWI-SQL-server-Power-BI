@@ -3,8 +3,8 @@
   "name": "220b5550a5b947fbcc0c",
   "position": {
     "x": 0,
-    "y": 260.43290043290045,
-    "z": 5000,
+    "y": 260.79692862684846,
+    "z": 7000,
     "height": 39.896103896103895,
     "width": 110.82251082251082,
     "tabOrder": 1000
@@ -25,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -127,6 +138,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -161,7 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2F80ED'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -170,7 +192,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             }

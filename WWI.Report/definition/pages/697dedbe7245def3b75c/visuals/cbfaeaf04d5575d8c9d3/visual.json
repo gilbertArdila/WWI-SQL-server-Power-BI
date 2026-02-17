@@ -3,10 +3,10 @@
   "name": "cbfaeaf04d5575d8c9d3",
   "position": {
     "x": 0,
-    "y": 244.91774891774892,
+    "y": 244.72246696035242,
     "z": 3000,
-    "height": 39.896103896103895,
-    "width": 110.82251082251082,
+    "height": 40.59911894273128,
+    "width": 165.77973568281939,
     "tabOrder": 3000
   },
   "visual": {
@@ -25,6 +25,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],
@@ -45,7 +56,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Purchase'"
+                  "Value": "'Sales Performance'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             },
@@ -60,8 +78,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#2D3436'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -74,24 +93,17 @@
                 }
               }
             },
-            "leftMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "5L"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
             "horizontalAlignment": {
               "expr": {
                 "Literal": {
                   "Value": "'left'"
+                }
+              }
+            },
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
                 }
               }
             }
@@ -144,6 +156,17 @@
           "selector": {
             "id": "hover"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -158,6 +181,44 @@
             }
           }
         }
+      ],
+      "fill": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2A2A2A'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -167,7 +228,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'página purchase'"
+                  "Value": "'Sales Performance'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -195,6 +263,52 @@
               "expr": {
                 "Literal": {
                   "Value": "'ef94274b15e6387e8e8e'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

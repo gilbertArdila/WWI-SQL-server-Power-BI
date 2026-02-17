@@ -4966,6 +4966,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.736
 			          }
+			        },
+			        {
+			          "Año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -7308,6 +7318,94 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "fact_venta.utilidad_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ventas",
+			          "ConceptualProperty": "Utilidad año anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad año anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_venta.margen_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ventas",
+			          "ConceptualProperty": "% margen año anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% margen año anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage margen año anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct margen año anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fact_venta.variación_margen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ventas",
+			          "ConceptualProperty": "% variación margen"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variación margen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage variación margen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct variación margen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -9598,6 +9696,105 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_ordenes_have_fact_ventas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_variación_margen": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.variación_margen": {
+			          "Target": {
+			            "Entity": "fact_venta.variación_margen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.variación_margen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__variación_margen"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_margen_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.margen_año_anterior": {
+			          "Target": {
+			            "Entity": "fact_venta.margen_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.margen_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have__margen_año_anterior"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_utilidad_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_venta.utilidad_año_anterior": {
+			          "Target": {
+			            "Entity": "fact_venta.utilidad_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_venta.utilidad_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_utilidad_año_anterior"
 			        }
 			      ]
 			    },

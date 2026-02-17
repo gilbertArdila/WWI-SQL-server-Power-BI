@@ -26,6 +26,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "text": [
@@ -127,6 +138,17 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "glow": [
@@ -161,7 +183,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#2F80ED'"
+                      "Value": "'#3A86FF'"
                     }
                   }
                 }
@@ -170,7 +192,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             }
@@ -226,6 +248,5 @@
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "e6cc590ff60540118a25",
-  "isHidden": true,
   "howCreated": "InsertVisualButton"
 }

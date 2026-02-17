@@ -11,13 +11,789 @@
     "sections": {
       "ef94274b15e6387e8e8e": {
         "visualContainers": {
-          "fc383dc69ba46c0818e8": {
+          "298e3bb732c3a4075290": {
+            "filters": {
+              "byName": {
+                "a6388286d51555cbd586": {
+                  "name": "a6388286d51555cbd586",
+                  "type": "TopN",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "subquery",
+                        "Expression": {
+                          "Subquery": {
+                            "Query": {
+                              "Version": 2,
+                              "From": [
+                                {
+                                  "Name": "d",
+                                  "Entity": "dim_cliente",
+                                  "Type": 0
+                                },
+                                {
+                                  "Name": "f",
+                                  "Entity": "fact_ventas",
+                                  "Type": 0
+                                }
+                              ],
+                              "Select": [
+                                {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "d"
+                                      }
+                                    },
+                                    "Property": "CustomerName"
+                                  },
+                                  "Name": "field"
+                                }
+                              ],
+                              "OrderBy": [
+                                {
+                                  "Direction": 2,
+                                  "Expression": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "f"
+                                        }
+                                      },
+                                      "Property": "ventas totales"
+                                    }
+                                  }
+                                }
+                              ],
+                              "Top": 10
+                            }
+                          }
+                        },
+                        "Type": 2
+                      },
+                      {
+                        "Name": "d",
+                        "Entity": "dim_cliente",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "CustomerName"
+                                }
+                              }
+                            ],
+                            "Table": {
+                              "SourceRef": {
+                                "Source": "subquery"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_cliente"
+                        }
+                      },
+                      "Property": "CustomerName"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              },
+              "byExpr": [
+                {
+                  "name": "c8bffbceff8816cc3135",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_cliente"
+                        }
+                      },
+                      "Property": "CustomerName"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "362f42cdb1ef208148ba": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9b294b04075a761004e1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "% Variación ventas"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "% Variación ventas"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "388beef1c7133f08eb05": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0acd42e67bf10a016f63",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "53c4b2354929b914475a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "94ad2bbca8679fbfdd92",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "Ventas año anterior"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dim_fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "FullDate"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "494b565e1a38b9118c06": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "7b51200c1645b63c1d00",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_cliente"
+                        }
+                      },
+                      "Property": "CustomerCategoryName"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c527c0a6e86bb2b0cb45",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "columnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_cliente"
+                        }
+                      },
+                      "Property": "CustomerCategoryName"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "4a9f37a858adc16f85e1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9f87384b884dde5b4c0c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_fecha"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "dim_fecha",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "Year"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "2015L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_fecha"
+                        }
+                      },
+                      "Property": "Year"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "4cad59cf81ab331fa2bb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e7af6be2edfb224e6442",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "% margen"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "% margen"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "7020c5082aa228dfc9a7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "135ba896666328f71fc4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "ventas totales"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "97bdc7910f2b31707f24": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9abc8b6d1a463e6e68dd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "Ventas año anterior"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "Ventas año anterior"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "c8743d0ba61556a846b7": {
+            "filters": {
+              "byName": {
+                "a6388286d51555cbd586": {
+                  "name": "a6388286d51555cbd586",
+                  "type": "TopN",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "subquery",
+                        "Expression": {
+                          "Subquery": {
+                            "Query": {
+                              "Version": 2,
+                              "From": [
+                                {
+                                  "Name": "d",
+                                  "Entity": "dim_cliente",
+                                  "Type": 0
+                                },
+                                {
+                                  "Name": "f",
+                                  "Entity": "fact_ventas",
+                                  "Type": 0
+                                }
+                              ],
+                              "Select": [
+                                {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "d"
+                                      }
+                                    },
+                                    "Property": "CustomerName"
+                                  },
+                                  "Name": "field"
+                                }
+                              ],
+                              "OrderBy": [
+                                {
+                                  "Direction": 2,
+                                  "Expression": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "f"
+                                        }
+                                      },
+                                      "Property": "ventas totales"
+                                    }
+                                  }
+                                }
+                              ],
+                              "Top": 10
+                            }
+                          }
+                        },
+                        "Type": 2
+                      },
+                      {
+                        "Name": "d",
+                        "Entity": "dim_cliente",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "d"
+                                    }
+                                  },
+                                  "Property": "CustomerName"
+                                }
+                              }
+                            ],
+                            "Table": {
+                              "SourceRef": {
+                                "Source": "subquery"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_cliente"
+                        }
+                      },
+                      "Property": "CustomerName"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              },
+              "byExpr": [
+                {
+                  "name": "9ff496c17f8b20bd2f28",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "utilidad total"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_ventas"
+                        }
+                      },
+                      "Property": "utilidad total"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_cliente"
+                        }
+                      },
+                      "Property": "CustomerName"
+                    }
+                  }
+                ]
+              }
             }
           },
           "4b9655b1b64f49959167": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "59bc71686dc64068dbce": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "90e8133c259e7f0c2b80": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {},
@@ -44,15 +820,6 @@
               }
             }
           },
-          "59bc71686dc64068dbce": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
           "f6207712a7fbab1162c2": {
             "singleVisual": {
               "visualType": "shape",
@@ -61,10 +828,32 @@
                 "mode": "hidden"
               }
             }
+          },
+          "fc383dc69ba46c0818e8": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
           }
         }
       }
     },
-    "objects": {}
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
   }
 }

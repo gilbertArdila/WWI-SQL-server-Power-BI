@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.0.0/schema.json",
+  "displayName": "Cerrar menú financial",
+  "name": "20c1d53365801819b654",
+  "options": {
+    "targetVisualNames": [
+      "1aad41fe6893a2837bb4"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "d6cede2bf94b4c86d1c6",
+    "sections": {
+      "d6cede2bf94b4c86d1c6": {
+        "visualContainers": {
+          "db76d1b87f7312b0ff70": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "f66f8748044a510eb056": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "a9b895903ba31a6ffb1e": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "1aad41fe6893a2837bb4": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "8eaaf57c8c751906e672": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "802ae56f52540654602b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "dcd54214b115da559c28": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {}
+  }
+}
