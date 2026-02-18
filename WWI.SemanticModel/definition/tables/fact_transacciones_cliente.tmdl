@@ -21,6 +21,17 @@ table fact_transacciones_cliente
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: 23b402a7-e7ae-45da-b66b-725a70e02560
 
+	measure 'Clientes Activos' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(dim_cliente[CustomerID]),
+			    fact_ventas
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 180cdac6-b771-43d9-b84d-42ac74bce319
+
 	column CustomerTransactionID
 		dataType: string
 		lineageTag: 346372ca-ec6a-4b5c-8c28-65e178c84b4f

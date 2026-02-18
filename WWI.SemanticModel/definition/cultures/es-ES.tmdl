@@ -5766,6 +5766,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.727
 			          }
+			        },
+			        {
+			          "Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7403,6 +7413,354 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.promedio_tickets": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "Promedio tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio tickets": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "promedio coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "promedio permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "promedio voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "promedio receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "promedio marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "promedio sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "promedio label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "promedio tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "promedio tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "promedio docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.total_ordenes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "total ordenes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total ordenes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate ordene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall ordene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.órdenes_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "órdenes año anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "órdenes año anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.variación_de_ordenes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "variación de ordenes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variación de ordenes": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.ticket_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "ticket año anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket año anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.variación_de_tickets": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "variación de tickets"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variación de tickets": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variación de coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "variación de permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "variación de voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "variación de receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "variación de marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "variación de sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "variación de label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "variación de tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "variación de tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "variación de docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.utilidad_promedio_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "utilidad promedio cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "utilidad promedio cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_transacciones_cliente.clientes_activos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_transacciones_cliente",
+			          "ConceptualProperty": "Clientes Activos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clientes activos": {
+			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -9696,6 +10054,402 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_ordenes_have_fact_ventas"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_fact_transacciones_cliente_clientes_activos": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "fact_transacciones_cliente.clientes_activos": {
+			          "Target": {
+			            "Entity": "fact_transacciones_cliente.clientes_activos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "fact_transacciones_cliente.clientes_activos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_clientes_activos"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_fact_ordene_utilidad_promedio_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_ordene.utilidad_promedio_cliente": {
+			          "Target": {
+			            "Entity": "fact_ordene.utilidad_promedio_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.utilidad_promedio_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_utilidad_promedio_cliente"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_fact_ordene_utilidad_promedio_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "fact_ordene.utilidad_promedio_cliente": {
+			          "Target": {
+			            "Entity": "fact_ordene.utilidad_promedio_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.utilidad_promedio_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_utilidad_promedio_cliente"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_fact_ordene_variación_de_tickets": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_ordene.variación_de_tickets": {
+			          "Target": {
+			            "Entity": "fact_ordene.variación_de_tickets"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.variación_de_tickets"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_variación_de_tickets"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_variación_de_tickets": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.variación_de_tickets": {
+			          "Target": {
+			            "Entity": "fact_ordene.variación_de_tickets"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.variación_de_tickets"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_variación_de_tickets"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_fact_ordene_ticket_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_ordene.ticket_año_anterior": {
+			          "Target": {
+			            "Entity": "fact_ordene.ticket_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.ticket_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_ticket_año_anterior"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_ticket_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.ticket_año_anterior": {
+			          "Target": {
+			            "Entity": "fact_ordene.ticket_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.ticket_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_ticket_año_anterior"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_variación_de_ordenes": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.variación_de_ordenes": {
+			          "Target": {
+			            "Entity": "fact_ordene.variación_de_ordenes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.variación_de_ordenes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_variación_de_ordenes"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_órdenes_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.órdenes_año_anterior": {
+			          "Target": {
+			            "Entity": "fact_ordene.órdenes_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.órdenes_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_órdenes_año_anterior"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_total_ordenes": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.total_ordenes": {
+			          "Target": {
+			            "Entity": "fact_ordene.total_ordenes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.total_ordenes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_total_ordenes"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_fact_ordene_promedio_tickets": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_ordene.promedio_tickets": {
+			          "Target": {
+			            "Entity": "fact_ordene.promedio_tickets"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.promedio_tickets"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_promedio_tickets"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_promedio_tickets": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.promedio_tickets": {
+			          "Target": {
+			            "Entity": "fact_ordene.promedio_tickets"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.promedio_tickets"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_promedio_tickets"
 			        }
 			      ]
 			    },

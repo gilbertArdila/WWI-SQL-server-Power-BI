@@ -55,12 +55,18 @@ table fact_ordenes
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: 16793984-9eb3-42f6-b1c5-5020a408e7ec
 
-	measure 'Tickets promedio' = DIVIDE(fact_ventas[ventas totales] , fact_ordenes[total ordenes])
+	measure 'Promedio tickets' = DIVIDE(fact_ventas[ventas totales] , fact_ordenes[total ordenes])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: f2332108-5a91-4e79-bfc0-83b3e505bff5
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'total ordenes' = DISTINCTCOUNT( fact_ordenes[OrderID])
+	measure 'total ordenes' = ```
+			CALCULATE(
+			    DISTINCTCOUNT(fact_ordenes[OrderID]),
+			    USERELATIONSHIP(dim_fecha[FullDate], fact_ordenes[OrderDate]),
+			    USERELATIONSHIP(fact_ordenes[CustomerID], dim_cliente[CustomerID])
+			    
+			    )
+			```
 		formatString: 0
 		lineageTag: 83805dd2-1ba3-454e-b901-5159527ac213
 
@@ -76,16 +82,20 @@ table fact_ordenes
 		lineageTag: 8dd2ffe3-f179-44ca-9356-9eb4c7bd3959
 
 	measure 'ticket año anterior' =
-			CALCULATE( [Tickets promedio],
+			CALCULATE( [Promedio tickets],
 			SAMEPERIODLASTYEAR(dim_fecha[FullDate]
 			))
 		lineageTag: 423548ea-2cf0-4eaf-88cd-3a6849be5d71
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'variación de tickets' = [Tickets promedio] -[ticket año anterior]
+	measure 'variación de tickets' = [Promedio tickets] -[ticket año anterior]
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: 7119a917-8fd9-43ee-b1bc-8663d757e4d9
+
+	measure 'utilidad promedio cliente' = DIVIDE([utilidad total], fact_transacciones_cliente[Clientes Activos])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 7ff464bc-5df9-4238-96f2-07ec7d5d267a
 
 	column OrderID
 		dataType: string
