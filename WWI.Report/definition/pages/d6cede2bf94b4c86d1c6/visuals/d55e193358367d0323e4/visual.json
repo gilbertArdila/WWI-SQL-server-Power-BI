@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "2b272d179edab356d649",
+  "name": "d55e193358367d0323e4",
   "position": {
-    "x": 24.912751677852349,
-    "y": 12.026845637583893,
-    "z": 5000,
-    "height": 91.060402684563755,
-    "width": 140.88590604026845,
-    "tabOrder": 6006
+    "x": 7,
+    "y": 0,
+    "z": 3007,
+    "height": 62,
+    "width": 151,
+    "tabOrder": 6007
   },
   "visual": {
     "visualType": "slicer",
@@ -27,9 +27,8 @@
                 }
               },
               "queryRef": "dim_fecha.Year",
-              "nativeQueryRef": "Año",
-              "active": true,
-              "displayName": "Año"
+              "nativeQueryRef": "Year",
+              "active": true
             }
           ]
         }
@@ -42,6 +41,20 @@
       "data": [
         {
           "properties": {
+            "startDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2014-01-01T00:00:00'"
+                }
+              }
+            },
+            "endDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2014-12-31T00:00:00'"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -58,7 +71,7 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             },
@@ -92,7 +105,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2013L"
+                                "Value": "2016L"
                               }
                             }
                           ]
@@ -107,98 +120,6 @@
         }
       ]
     },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4659d1e16530a7016caf",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_fecha"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

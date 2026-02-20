@@ -23,7 +23,7 @@
                       "Entity": "fact_transacciones_cliente"
                     }
                   },
-                  "Property": "% clientes morosos"
+                  "Property": "% Clientes Morosos"
                 }
               },
               "queryRef": "fact_transacciones_cliente.% clientes morosos",
@@ -60,7 +60,7 @@
                                           "Entity": "fact_transacciones_cliente"
                                         }
                                       },
-                                      "Property": "% clientes morosos"
+                                      "Property": "% Clientes Morosos"
                                     }
                                   },
                                   "Right": {
@@ -80,7 +80,7 @@
                                           "Entity": "fact_transacciones_cliente"
                                         }
                                       },
-                                      "Property": "% clientes morosos"
+                                      "Property": "% Clientes Morosos"
                                     }
                                   },
                                   "Right": {
@@ -111,7 +111,7 @@
                                           "Entity": "fact_transacciones_cliente"
                                         }
                                       },
-                                      "Property": "% clientes morosos"
+                                      "Property": "% Clientes Morosos"
                                     }
                                   },
                                   "Right": {
@@ -131,7 +131,7 @@
                                           "Entity": "fact_transacciones_cliente"
                                         }
                                       },
-                                      "Property": "% clientes morosos"
+                                      "Property": "% Clientes Morosos"
                                     }
                                   },
                                   "Right": {
@@ -162,7 +162,7 @@
                                           "Entity": "fact_transacciones_cliente"
                                         }
                                       },
-                                      "Property": "% clientes morosos"
+                                      "Property": "% Clientes Morosos"
                                     }
                                   },
                                   "Right": {
@@ -182,7 +182,7 @@
                                           "Entity": "fact_transacciones_cliente"
                                         }
                                       },
-                                      "Property": "% clientes morosos"
+                                      "Property": "% Clientes Morosos"
                                     }
                                   },
                                   "Right": {

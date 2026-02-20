@@ -97,6 +97,37 @@ table fact_ordenes
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 7ff464bc-5df9-4238-96f2-07ec7d5d267a
 
+	measure 'variación utilidad %' =
+			DIVIDE(
+			    [utilidad total]- [Utilidad año anterior],
+			    [Utilidad año anterior])
+		lineageTag: 9092343b-a906-4bbc-9a80-e584751f0b81
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'variación ordenes %' =
+			DIVIDE(
+			    [total ordenes] - fact_ordenes[órdenes año anterior],
+			    fact_ordenes[órdenes año anterior])
+		lineageTag: 58894a57-f0ac-487d-95e8-e85fc8db4dfe
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'variación tickets %' = DIVIDE( [Promedio tickets] - [ticket año anterior], [ticket año anterior])
+		lineageTag: f53f6f2f-185b-4288-9119-d9979e3a3ab4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nivel de Riesgo' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Variación Utilidad %] < -0.2, "Alto Riesgo",
+			    [Variación Utilidad %] < 0, "Riesgo Moderado",
+			    "Estable / Crecimiento"
+			)
+		lineageTag: b2f754c8-867b-4872-b5a3-f2f165b3b3b1
+
 	column OrderID
 		dataType: string
 		lineageTag: 83ba4eb2-2df0-4d34-9304-6ed1cf569b88

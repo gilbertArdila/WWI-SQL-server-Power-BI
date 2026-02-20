@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "d6cede2bf94b4c86d1c6",
   "displayName": "Financial Risk",
-  "displayOption": "FitToWidth",
-  "height": 720,
+  "displayOption": "ActualSize",
+  "height": 1000,
   "width": 1280,
   "objects": {
     "background": [
@@ -43,5 +43,22 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "7703b961ea803e54c146",
+      "target": "9a3a0ed9593c6f8dfacd",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7703b961ea803e54c146",
+      "target": "149fcc95cc2dd6efd158",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7703b961ea803e54c146",
+      "target": "59a1ecb4de781cb3d725",
+      "type": "NoFilter"
+    }
+  ]
 }

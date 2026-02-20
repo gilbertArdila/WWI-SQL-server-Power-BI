@@ -561,7 +561,7 @@
                           "Entity": "fact_transacciones_cliente"
                         }
                       },
-                      "Property": "% clientes morosos"
+                      "Property": "% Clientes Morosos"
                     }
                   },
                   "howCreated": 0

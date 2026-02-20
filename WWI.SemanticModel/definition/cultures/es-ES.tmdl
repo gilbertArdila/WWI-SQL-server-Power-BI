@@ -4356,7 +4356,7 @@ cultureInfo es-ES
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "fact_transacciones_cliente",
-			          "ConceptualProperty": "% clientes morosos"
+			          "ConceptualProperty": "% Clientes Morosos"
 			        }
 			      },
 			      "State": "Generated",
@@ -6057,6 +6057,16 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Categoria": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -7760,6 +7770,286 @@ cultureInfo es-ES
 			      "Terms": [
 			        {
 			          "clientes activos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.variación_utilidad_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "variación utilidad %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variación utilidad %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variación utilidad percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "variación utilidad pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.variación_ordenes_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "variación ordenes %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variación ordenes %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variación ordene percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "variación ordene pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.variación_tickets_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "variación tickets %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variación tickets %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variación ticket percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "variación ticket pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_cliente.cliente_en_riesgo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_cliente",
+			          "ConceptualProperty": "cliente en riesgo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cliente en riesgo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_cliente.total_clientes_en_riesgo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_cliente",
+			          "ConceptualProperty": "total clientes en riesgo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total clientes en riesgo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate cliente en riesgo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "overall cliente en riesgo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "dim_cliente.clientes_en_riesgo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_cliente",
+			          "ConceptualProperty": "% Clientes en Riesgo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% clientes en riesgo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage cliente en riesgo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct cliente en riesgo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fact_ordene.nivel_de_riesgo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_ordenes",
+			          "ConceptualProperty": "Nivel de Riesgo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel de riesgo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_transacciones_cliente.saldo_pendiente_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_transacciones_cliente",
+			          "ConceptualProperty": "saldo pendiente total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo pendiente total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "saldo pendiente aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "saldo pendiente overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fact_transacciones_cliente.medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_transacciones_cliente",
+			          "ConceptualProperty": "Medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_cliente.nivel_de_riesgo_avanzado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_cliente",
+			          "ConceptualProperty": "Nivel de Riesgo Avanzado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel de riesgo avanzado": {
 			            "State": "Generated"
 			          }
 			        }
@@ -10054,6 +10344,435 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_ordenes_have_fact_ventas"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_dim_cliente_nivel_de_riesgo_avanzado": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "dim_cliente.nivel_de_riesgo_avanzado": {
+			          "Target": {
+			            "Entity": "dim_cliente.nivel_de_riesgo_avanzado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.nivel_de_riesgo_avanzado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_nivel_de_riesgo_avanzado"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_dim_cliente_nivel_de_riesgo_avanzado": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "dim_cliente.nivel_de_riesgo_avanzado": {
+			          "Target": {
+			            "Entity": "dim_cliente.nivel_de_riesgo_avanzado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.nivel_de_riesgo_avanzado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_nivel_de_riesgo_avanzado"
+			        }
+			      ]
+			    },
+			    "fact_transacciones_cliente_has_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transacciones_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transacciones_cliente": {
+			          "Target": {
+			            "Entity": "fact_transacciones_cliente"
+			          }
+			        },
+			        "fact_transacciones_cliente.medida": {
+			          "Target": {
+			            "Entity": "fact_transacciones_cliente.medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transacciones_cliente"
+			            },
+			            "Object": {
+			              "Role": "fact_transacciones_cliente.medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_clientes_have_medida"
+			        }
+			      ]
+			    },
+			    "fact_transacciones_cliente_has_saldo_pendiente_total": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transacciones_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transacciones_cliente": {
+			          "Target": {
+			            "Entity": "fact_transacciones_cliente"
+			          }
+			        },
+			        "fact_transacciones_cliente.saldo_pendiente_total": {
+			          "Target": {
+			            "Entity": "fact_transacciones_cliente.saldo_pendiente_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transacciones_cliente"
+			            },
+			            "Object": {
+			              "Role": "fact_transacciones_cliente.saldo_pendiente_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_clientes_have_saldo_pendiente_total"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_fact_ordene_nivel_de_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_ordene.nivel_de_riesgo": {
+			          "Target": {
+			            "Entity": "fact_ordene.nivel_de_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.nivel_de_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_nivel_de_riesgo"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_clientes_en_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.clientes_en_riesgo": {
+			          "Target": {
+			            "Entity": "dim_cliente.clientes_en_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.clientes_en_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have__clientes_en_riesgo"
+			        }
+			      ]
+			    },
+			    "dim_cliente_has_total_clientes_en_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_cliente": {
+			          "Target": {
+			            "Entity": "dim_cliente"
+			          }
+			        },
+			        "dim_cliente.total_clientes_en_riesgo": {
+			          "Target": {
+			            "Entity": "dim_cliente.total_clientes_en_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_cliente"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.total_clientes_en_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_clientes_have_total_clientes_en_riesgo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_dim_cliente_cliente_en_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "dim_cliente.cliente_en_riesgo": {
+			          "Target": {
+			            "Entity": "dim_cliente.cliente_en_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.cliente_en_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_cliente_en_riesgo"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_dim_cliente_cliente_en_riesgo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "dim_cliente.cliente_en_riesgo": {
+			          "Target": {
+			            "Entity": "dim_cliente.cliente_en_riesgo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "dim_cliente.cliente_en_riesgo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_cliente_en_riesgo"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_fact_ordene_variación_tickets_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_ordene.variación_tickets_": {
+			          "Target": {
+			            "Entity": "fact_ordene.variación_tickets_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.variación_tickets_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_variación_tickets_"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_variación_tickets_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.variación_tickets_": {
+			          "Target": {
+			            "Entity": "fact_ordene.variación_tickets_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.variación_tickets_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_variación_tickets_"
+			        }
+			      ]
+			    },
+			    "fact_ordene_has_variación_ordenes_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_ordene": {
+			          "Target": {
+			            "Entity": "fact_ordene"
+			          }
+			        },
+			        "fact_ordene.variación_ordenes_": {
+			          "Target": {
+			            "Entity": "fact_ordene.variación_ordenes_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_ordene"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.variación_ordenes_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ordenes_have_variación_ordenes_"
+			        }
+			      ]
+			    },
+			    "fact_venta_has_fact_ordene_variación_utilidad_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_venta": {
+			          "Target": {
+			            "Entity": "fact_venta"
+			          }
+			        },
+			        "fact_ordene.variación_utilidad_": {
+			          "Target": {
+			            "Entity": "fact_ordene.variación_utilidad_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_venta"
+			            },
+			            "Object": {
+			              "Role": "fact_ordene.variación_utilidad_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_ventas_have_variación_utilidad_"
 			        }
 			      ]
 			    },

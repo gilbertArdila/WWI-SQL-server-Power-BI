@@ -1,6 +1,42 @@
 table dim_cliente
 	lineageTag: c766fcf2-2311-4d11-b696-1739fd46b248
 
+	measure 'cliente en riesgo' =
+			IF(
+			    [variación utilidad %] < 0 && [variación ordenes %] < 0,1,0)
+		formatString: 0
+		lineageTag: aad00570-31ae-4fe5-9cbf-2ed255e613e2
+
+	measure 'total clientes en riesgo' = CALCULATE( DISTINCTCOUNT( dim_cliente[CustomerCategoryID]), FILTER(ALL(dim_cliente),dim_cliente[cliente en riesgo] = 1))
+		formatString: 0
+		lineageTag: efa71464-5d31-4bb0-87ef-0021bfb357f0
+
+	measure '% Clientes en Riesgo' =
+			
+			DIVIDE(
+			    [Total Clientes en Riesgo],
+			    DISTINCTCOUNT(dim_cliente[CustomerID])
+			)
+		lineageTag: 65756104-2b7f-4730-9437-34299065f803
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Nivel de Riesgo Avanzado' = ```
+			
+			SWITCH(
+			    TRUE(),
+			    [Variación Utilidad %] < -0.2 
+			        && [variación ordenes %] < -0.2, "🔴 Alto Riesgo",
+			    [Variación Utilidad %] < 0, "🟡 Riesgo Moderado",
+			    "🟢 Estable"
+			)
+			```
+		lineageTag: 85e3afb4-f01c-4c5e-9bf1-2ecc08e30bde
+
+	measure 'Total Clientes' = DISTINCTCOUNT(dim_cliente[CustomerID])
+		formatString: 0
+		lineageTag: 5a108d29-dcf2-4791-bbed-9a005c4cf2a8
+
 	column CustomerID
 		dataType: string
 		lineageTag: f08c9aa2-ec45-4af3-a7c7-1fd3691bb3c8

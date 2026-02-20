@@ -13,11 +13,12 @@ table fact_transacciones_cliente
 		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 36034ec9-2914-4ff9-bdf2-237b7edcdbfa
 
-	measure '% clientes morosos' =
+	measure '% Clientes Morosos' =
+			
 			DIVIDE(
-			    fact_transacciones_cliente[clientes morosos],
-			    DISTINCTCOUNT(dim_cliente[CustomerID]
-			    ))
+			    [clientes morosos],
+			    [Clientes Activos]
+			)
 		formatString: 0.0\ %;-0.0\ %;0.0\ %
 		lineageTag: 23b402a7-e7ae-45da-b66b-725a70e02560
 
@@ -31,6 +32,16 @@ table fact_transacciones_cliente
 			```
 		formatString: 0
 		lineageTag: 180cdac6-b771-43d9-b84d-42ac74bce319
+
+	measure 'saldo pendiente total' = SUM(fact_transacciones_cliente[OutstandingBalance])
+		lineageTag: 14a3c2f0-ad93-4359-9dce-9217eb0e651a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Medida
+		lineageTag: ef3caa41-d10f-496e-8bfc-cedfabcb4d3a
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
 
 	column CustomerTransactionID
 		dataType: string
